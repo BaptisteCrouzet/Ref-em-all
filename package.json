@@ -1,0 +1,30 @@
+{
+  "name": "ref-em-all",
+  "version": "1.0.0",
+  "description": "Ref'em all un projet Ynov pour tous les référencer !",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BaptisteCrouzet/ref-em-all.git"
+  },
+  "keywords": [
+    "seo"
+  ],
+  "author": "Baptiste Crouzet, Philippe Gambier",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BaptisteCrouzet/ref-em-all/issues"
+  },
+  "homepage": "https://github.com/BaptisteCrouzet/ref-em-all#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.16.0"
+  }
+}
