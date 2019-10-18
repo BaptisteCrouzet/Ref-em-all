@@ -31,7 +31,7 @@ gulp.task('sass', function () {
 // Optimize images
 gulp.task('images-optimize', function () {
     return gulp
-        .src('./images/*')
+        .src('./assets/images/*')
         .pipe(
             responsive(
                 {
@@ -314,6 +314,6 @@ gulp.task('watch', function () {
         },
     })
     gulp.watch('./assets/styles/main.scss', gulp.series('sass'));
-    gulp.watch('./images/*', gulp.series('images-optimize'));
+    gulp.watch('./assets/images/*', gulp.series('images-optimize'));
     gulp.watch("**/*.*").on('change', browserSync.reload);
 });
