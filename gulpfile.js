@@ -26,15 +26,12 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('browserSync', function () {
+gulp.task('watch', function () {
     browserSync.init({
         server: {
-            baseDir: ''
+            baseDir: "./"
         },
     })
-})
-
-gulp.task('watch', function () {
     gulp.watch('./assets/styles/*.scss', gulp.series('sass'));
-    gulp.watch('**/*.*', gulp.series('browserSync'));
+    gulp.watch("**/*.*").on('change', browserSync.reload);
 });
