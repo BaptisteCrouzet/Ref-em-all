@@ -2,4 +2,69 @@
 
 @import "variables.scss";
 @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+
+// Here comes all the typo styles
+body {
+    overflow-x: hidden;
+}
+
+* {
+    line-height: 1.62;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+a {
+    color: $c-gray;
+    font-size: 14px;
+    text-decoration: none;
+
+    &:hover {
+        color: $c-blue-secondary;
+    }
+}
+
+input,
+button,
+select,
+textarea {
+    background-color: white;
+    border-radius: none;
+    border: 1px solid $c-gray;
+
+    &:active,
+    &:focus {
+        border-color: $c-blue-secondary;
+    }
+}
+
+ul,
+li {
+    list-style: none;
+}
+
 @import "styles.scss";
