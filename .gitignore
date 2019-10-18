@@ -1,3 +1,6 @@
 node_modules
 **/*.map
 **/maps/
+/dist/*.css
+/dist/*.map
+/images/
