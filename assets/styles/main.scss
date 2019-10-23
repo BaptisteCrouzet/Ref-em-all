@@ -1,11 +1,11 @@
 // Here we call all the style files
 
-@import "../../node_modules/bootstrap/scss/variables.scss"; // Bootstrap vars
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
 @import "variables.scss";
-@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss"; // Bootstrap grid
 
 // Here comes all the typo styles
 body {
+    margin-top: 102px;
     overflow-x: hidden;
 }
 
