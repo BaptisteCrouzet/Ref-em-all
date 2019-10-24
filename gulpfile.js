@@ -8,6 +8,7 @@ const browserSync = require('browser-sync').create();
 const webp = require('gulp-webp');
 const responsive = require('gulp-responsive');
 const concat = require('gulp-concat');
+const minify = require('gulp-minify');
 
 sass.compiler = require('node-sass');
 
@@ -308,14 +309,26 @@ gulp.task('images-optimize', function () {
         .pipe(gulp.dest('dist/images'));
 });
 
+// Task for JS Scripts
+gulp.task('js', function () {
+    return gulp.src('./assets/js/*.js')
+        .pipe(minify())
+        .pipe(gulp.dest('./dist'));
+});
+
 // Watch task
 gulp.task('watch', function () {
     browserSync.init({
         server: {
             baseDir: "./"
         },
+        tunnel: true,
+        online: true,
+        open: "local",
+        reloadOnRestart: true
     })
     gulp.watch('./assets/styles/*.scss', gulp.series('sass'));
+    gulp.watch('./assets/js/*.js', gulp.series('js'));
     gulp.watch('./assets/images/*', gulp.series('images-optimize'));
     gulp.watch("**/*.*").on('change', browserSync.reload);
 });
