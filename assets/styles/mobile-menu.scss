@@ -1,0 +1,279 @@
+// https://codepen.io/GeoffreyCrofte/pen/ajKVRq
+
+/* Main menu positionning */
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
+@import "variables.scss";
+
+@include media-breakpoint-down(md) {
+    .main-nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.22);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.14);
+        opacity: 0;
+        z-index: -1;
+        visibility: hidden;
+        transition: all .375s;
+        padding-top: 59px;
+
+        /* Yellow band effect */
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: -15px;
+            background: white;
+            transform-origin: 0 0;
+            transform: skew(-14deg) translateX(-120%);
+            transition: all .275s .1s;
+        }
+
+        &.is-open {
+            opacity: 1;
+            z-index: 100;
+            visibility: visible;
+
+            &::before {
+                transform: skew(-14deg) translateX(0);
+            }
+
+            a {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Skewing effect on menu links */
+        ul {
+            display: inline-flex;
+            flex-direction: column;
+            height: 100%;
+            margin: 0;
+            align-items: flex-end;
+            justify-content: center;
+            transform: translateX(-18%) skew(-16deg);
+
+            li {
+                display: block;
+                margin: .5rem 0;
+                text-align: right;
+                transform: skew(16deg);
+
+                a {
+                    img {
+                        height: 35px;
+                    }
+                }
+
+                a + ul {
+                    display: none;
+                }
+
+                // todo :
+                &:nth-child(1) a {
+                    transition: all 275ms 175ms
+                }
+                &:nth-child(2) a {
+                    transition: all 275ms 225ms
+                }
+                &:nth-child(3) a {
+                    transition: all 275ms 275ms
+                }
+                &:nth-child(4) a {
+                    transition: all 275ms 325ms
+                }
+                &:nth-child(5) a {
+                    transition: all 275ms 375ms
+                }
+                &:nth-child(6) a {
+                    transition: all 275ms 425ms
+                }
+            }
+        }
+
+        /* Decoration */
+        ul,
+        li {
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Apparition effect on links */
+        a {
+            display: block;
+            padding: 12px 0;
+            color: $c-blue-main;
+            font-size: 1.4em;
+            text-decoration: none;
+            font-weight: bold;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        & > a:first-child {
+            display: none;
+        }
+    }
+
+    /* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
+    .open-main-nav {
+        position: absolute;
+        top: 8px;
+        padding-top: 20px;
+        right: 15px;
+        z-index: 1000;
+        background: none;
+        border: 0;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .burger {
+        position: relative;
+        display: block;
+        width: 28px;
+        height: 4px;
+        margin: 0 auto;
+        background: $c-blue-main;
+        transform: skew(5deg);
+        transition: all .275s;
+
+        &:after,
+        &:before {
+            content: '';
+            display: block;
+            height: 100%;
+            background: $c-blue-main;
+            transition: all .275s;
+        }
+
+        &:after {
+            transform: translateY(-12px) translateX(-2px) skew(-20deg);
+        }
+
+        &:before {
+            transform: translateY(-16px) skew(-10deg);
+        }
+    }
+
+    /* Toggle State part */
+    .is-open  {
+        .burger {
+            transform: skew(5deg) translateY(-8px) rotate(-45deg);
+
+            &:before {
+                transform: translateY(0px) skew(-10deg) rotate(75deg);
+            }
+
+            &:after {
+                transform: translateY(-12px) translateX(10px) skew(-20deg);
+                opacity: 0;
+            }
+        }
+    }
+
+    /* MENU Text part */
+
+    .burger-text {
+        display: block;
+        font-size: .675rem;
+        letter-spacing: .05em;
+        margin-top: .5em;
+        text-transform: uppercase;
+        font-weight: 500;
+        text-align: center;
+        color: $c-blue-main;
+    }
+
+    html {
+        height: 100%;
+    }
+
+    header {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        margin-top: 0;
+
+        main {
+            padding-top: 90px;
+        }
+    }
+}
+
+.header-mobile {
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    & > a:first-child {
+        display: block;
+        margin-left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+        width: max-content;
+        z-index: 1500;
+
+        img {
+            height: 45px;
+            margin-top: 8px;
+            z-index: 1500;
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .main-nav {
+        &:before {
+            transform: initial !important;
+        }
+
+        &.is-open {
+            &:before {
+                transform: initial !important;
+            }
+        }
+
+        ul,
+        li {
+            transform: initial !important;
+        }
+
+        ul {
+            align-items: center;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .header-mobile {
+        display: none;
+    }
+
+    #burger {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 510px) {
+    .main-nav {
+        a {
+            padding: initial;
+        }
+    }
+}

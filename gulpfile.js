@@ -7,12 +7,13 @@ const cleanCSS = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 const webp = require('gulp-webp');
 const responsive = require('gulp-responsive');
+const concat = require('gulp-concat');
 
 sass.compiler = require('node-sass');
 
 // Optimisation for sass files in dev
 gulp.task('sass', function () {
-    return gulp.src('./assets/styles/main.scss')
+    return gulp.src('./assets/styles/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(cleanCSS({
@@ -24,6 +25,7 @@ gulp.task('sass', function () {
             console.log(`${details.name} time spent in compiling : ${details.stats.timeSpent}ms`);
             console.log(`${details.name} Errors : ${details.errors}`);
         }))
+        .pipe(concat('main.css'))
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./dist'));
 });
@@ -313,7 +315,7 @@ gulp.task('watch', function () {
             baseDir: "./"
         },
     })
-    gulp.watch('./assets/styles/main.scss', gulp.series('sass'));
+    gulp.watch('./assets/styles/*.scss', gulp.series('sass'));
     gulp.watch('./assets/images/*', gulp.series('images-optimize'));
     gulp.watch("**/*.*").on('change', browserSync.reload);
 });
