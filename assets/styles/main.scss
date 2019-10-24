@@ -5,8 +5,11 @@
 
 // Here comes all the typo styles
 body {
-    margin-top: 102px;
     overflow-x: hidden;
+    max-width: 100%;
+    margin-top: 102px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 * {

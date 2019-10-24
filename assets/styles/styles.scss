@@ -1,103 +1,101 @@
 // Here come the styles of the site
-@import "../../node_modules/bootstrap/scss/variables.scss"; // Bootstrap vars
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
 @import "variables.scss";
 
-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+@include media-breakpoint-up(lg) {
+    header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
 
-    nav {
-        background-color: white;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-        display: flex;
-        height: 80px;
-        justify-content: space-around;
-        width: 100%;
-
-        @include media-breakpoint-up(lg) {
-            // todo hamburger icon appear and logo goes on the right
-        }
-        & > a {
+        nav {
+            background-color: white;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
             display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin-left: 15px;
-            margin-right: 15px;
-
-            img {
-                height: 45px;
-            }
-        }
-
-        & > ul {
-            display: flex;
-            justify-content: space-evenly;
-            max-width: 1100px;
+            height: 80px;
+            justify-content: space-around;
             width: 100%;
 
-            li {
+            & > a {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
+                margin-left: 15px;
+                margin-right: 15px;
 
-                a {
-                    color: $c-blue-main;
-                    font-weight: bold;
-                    font-size: 15px;
-
-                    &:hover {
-                        color: $c-blue-main;
-                    }
-
-                    img {
-                        height: 30px;
-                        margin-top: 4px;
-                    }
-                }
-
-                a + ul {
-                    background-color: white;
-                    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.10196078431372549);
-                    margin-left: -10px;
-                    padding: 20px;
-                    opacity: 0;
-                    position: absolute;
-                    top: 63px;
-                    visibility: hidden;
-
-                    li {
-                        margin-bottom: 15px;
-
-                        &:last-child {
-                            margin-bottom: 5px;
-                        }
-
-                        a {
-                            color: $c-blue-secondary;
-
-                            &:hover {
-                                color: $c-blue-main;
-                            }
-                        }
-                    }
-                }
-
-                &:hover {
-                    a {
-                        color: $c-blue-secondary;
-                    }
-
-                    a + ul {
-                        opacity: 1;
-                        visibility: visible;
-                    }
+                img {
+                    height: 45px;
                 }
             }
 
-            @include media-breakpoint-up(lg) {
-                // todo menu display
+            & > ul {
+                display: flex;
+                justify-content: space-evenly;
+                max-width: 1100px;
+                width: 100%;
+
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    & > a {
+                        border-bottom: 1px solid transparent;
+                        color: $c-blue-main;
+                        font-weight: bold;
+                        font-size: 15px;
+                        transition: 0.3s ease-in-out;
+
+                        &:hover {
+                            border-bottom-color: $c-blue-main;
+                            color: $c-blue-main;
+                        }
+
+                        img {
+                            height: 30px;
+                            margin-top: 4px;
+                        }
+                    }
+
+                    a + ul {
+                        background-color: white;
+                        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.10196078431372549);
+                        margin-left: -10px;
+                        padding: 20px;
+                        opacity: 0;
+                        position: absolute;
+                        top: 63px;
+                        visibility: hidden;
+
+                        li {
+                            margin-bottom: 15px;
+
+                            &:last-child {
+                                margin-bottom: 5px;
+                            }
+
+                            a {
+                                color: $c-blue-secondary;
+
+                                &:hover {
+                                    color: $c-blue-main;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        a {
+                            color: $c-blue-secondary;
+                        }
+
+                        a + ul {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
             }
         }
     }
