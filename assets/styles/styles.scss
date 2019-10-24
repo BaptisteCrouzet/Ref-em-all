@@ -41,14 +41,13 @@
                     justify-content: center;
 
                     & > a {
-                        border-bottom: 1px solid transparent;
+                        border-bottom: 2px solid transparent;
                         color: $c-blue-main;
                         font-weight: bold;
                         font-size: 15px;
                         transition: 0.3s ease-in-out;
 
                         &:hover {
-                            border-bottom-color: $c-blue-main;
                             color: $c-blue-main;
                         }
 
@@ -76,6 +75,7 @@
                             }
 
                             a {
+                                border-bottom: initial;
                                 color: $c-blue-secondary;
 
                                 &:hover {
@@ -86,13 +86,26 @@
                     }
 
                     &:hover {
-                        a {
+                        > a {
+                            border-bottom-color: $c-blue-main;
                             color: $c-blue-secondary;
                         }
 
                         a + ul {
                             opacity: 1;
                             visibility: visible;
+                        }
+                    }
+
+                    &:nth-child(6) {
+                        a {
+                            border-bottom-color: transparent;
+                            transform: rotate(0deg);
+                            transition: transform .3s ease-in-out;
+                        }
+
+                        a:hover {
+                            transform: rotate(30deg);
                         }
                     }
                 }
