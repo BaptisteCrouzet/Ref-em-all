@@ -1,5 +1,4 @@
-// MOBILE MENU
-
+// ======= MOBILE MENU =======
 let burger = document.getElementById('burger'),
     nav = document.getElementById('main-nav');
 
@@ -8,11 +7,11 @@ burger.addEventListener('click', function () {
     nav.classList.toggle('is-open');
 });
 
-/* Onload demo - dirty timeout */
-let clickEvent = new Event('click');
+// ======= Footer margin =======
+window.onresize = function () {
+    let height = document.getElementsByTagName('footer')[0].offsetHeight;
+    document.getElementById('page').style.marginBottom = String(height) + "px";
+}
 
-window.addEventListener('load', function () {
-    setTimeout(function () {
-        burger.dispatchEvent(clickEvent);
-    }, 5500);
-});
+let height = document.getElementsByTagName('footer')[0].offsetHeight;
+document.getElementById('page').style.marginBottom = String(height) + "px";
