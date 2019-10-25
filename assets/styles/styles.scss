@@ -2,6 +2,8 @@
 @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
 @import "variables.scss";
 
+
+// ========== FOOTER ON DESTOPS ========== //
 @include media-breakpoint-up(lg) {
     header {
         position: fixed;
@@ -113,3 +115,55 @@
         }
     }
 }
+// =========== END HEADER ========= //
+
+
+// =========== FOOTER AND MAIN BEHAVIOR ========= //
+$footerheight: 300px;
+
+main {
+    position: relative;
+    z-index: 1;
+    margin-bottom: $footerheight;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: $footerheight;
+}
+// =========== END FOOTER AND MAIN BEHAVIOR ========= //
+
+
+// =========== FOOTER ========== //
+footer {
+    background-color: $c-gray;
+
+    .container {
+        max-width: initial;
+
+        p,
+        a {
+            color: white;
+        }
+
+        .generic-text,
+        .copyrigths {
+            p {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        .copyrigths {
+            font-size: small;
+        }
+
+        .agency {
+            text-align: center;
+        }
+    }
+}
+// =========== END FOOTER ========== //

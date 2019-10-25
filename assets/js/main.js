@@ -10,9 +10,3 @@ burger.addEventListener('click', function () {
 
 /* Onload demo - dirty timeout */
 let clickEvent = new Event('click');
-
-window.addEventListener('load', function () {
-    setTimeout(function () {
-        burger.dispatchEvent(clickEvent);
-    }, 5500);
-});
