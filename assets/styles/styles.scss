@@ -119,12 +119,11 @@
 
 
 // =========== FOOTER AND MAIN BEHAVIOR ========= //
-$footerheight: 300px;
-
 main {
+    background-color: #fff;
     position: relative;
+    min-height: 100vh;
     z-index: 1;
-    margin-bottom: $footerheight;
 }
 
 footer {
@@ -132,37 +131,127 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    height: $footerheight;
 }
 // =========== END FOOTER AND MAIN BEHAVIOR ========= //
 
 
 // =========== FOOTER ========== //
 footer {
-    background-color: $c-gray;
+    background-color: $c-dark-gray;
 
     .container {
-        max-width: initial;
+        .row {
+            &:first-child {
+                padding: 30px;
 
-        p,
-        a {
-            color: white;
-        }
+                .links {
+                    ul {
+                        padding: initial;
+                        margin: 0;
 
-        .generic-text,
-        .copyrigths {
-            p {
-                text-align: center;
-                width: 100%;
+                        li {
+                            height: 35px;
+                            text-align: center;
+                        }
+                    }
+                }
+
+                .refemall-agency {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    margin-bottom: 15px;
+
+                    img {
+                        max-width: 170px;
+                    }
+
+                    img,
+                    p {
+                        width: 100%;
+                    }
+                }
+
+                .socials {
+                    display: flex;
+                    justify-content: center;
+
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 22px;
+                    }
+
+                    a {
+                        background-color: white;
+                        border-radius: 50%;
+                        display: inline-block;
+                        height: 30px;
+                        margin: 7px;
+                        margin-top: -5px;
+                        width: 30px;
+
+                        img {
+                            margin-left: -2px;
+                            margin-top: -2px;
+                            width: 34px;
+                        }
+                    }
+                }
+            }
+
+            p,
+            a {
+                color: white;
+            }
+
+            a {
+                white-space: nowrap;
+            }
+
+            .generic-text,
+            .copyrigths {
+                p {
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+
+            .generic-text {
+                p {
+                    font-size: 11px;
+                }
+            }
+
+            .copyrigths {
+                p {
+                    font-size: xx-small;
+                }
             }
         }
+    }
+}
 
-        .copyrigths {
-            font-size: small;
+#custom-foot {
+    .agency {
+        text-align: center;
+
+        h5 {
+            color: black;
+            margin-bottom:  5px;
+            text-transform: uppercase;
         }
 
-        .agency {
-            text-align: center;
+        .adress {
+            margin-top: 0px;
+        }
+
+        .tel {
+            margin-bottom: 0;
+        }
+
+        .mail {
+            margin-top: 0;
         }
     }
 }
