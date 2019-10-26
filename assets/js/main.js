@@ -7,11 +7,16 @@ burger.addEventListener('click', function () {
     nav.classList.toggle('is-open');
 });
 
-// ======= Footer margin =======
+// ======= FOOTER MARGINS =======
 window.onresize = function () {
     let height = document.getElementsByTagName('footer')[0].offsetHeight;
     document.getElementById('page').style.marginBottom = String(height) + "px";
 }
 
-let height = document.getElementsByTagName('footer')[0].offsetHeight;
-document.getElementById('page').style.marginBottom = String(height) + "px";
+window.onload = function () {
+    let height = document.getElementsByTagName('footer')[0].offsetHeight;
+    document.getElementById('page').style.marginBottom = String(height) + "px";
+}
+
+// ======= SCROLL REVEAL ========
+ScrollReveal().reveal('section');
