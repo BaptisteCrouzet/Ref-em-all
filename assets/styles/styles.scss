@@ -10,6 +10,7 @@
         top: 0;
         right: 0;
         left: 0;
+        z-index: 100;
 
         nav {
             background-color: white;
@@ -256,3 +257,32 @@ footer {
     }
 }
 // =========== END FOOTER ========== //
+
+// =========== HOMEPAGE ============= //
+.home-head {
+    position: relative;
+
+    h1 {
+        color: #000;
+        display: block;
+        font-size: 50px;
+        font-weight: 700;
+        left: 50%;
+        margin: 0;
+        max-width: 1200px;
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        transform: translate(-50%,-50%);
+        width: 100%;
+        z-index: 20;
+    }
+
+    img {
+        height: 450px;
+        max-width: 1920px;
+        object-fit: cover;
+        position: relative;
+        z-index: 10;
+    }
+}
