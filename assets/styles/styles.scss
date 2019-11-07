@@ -162,7 +162,7 @@ footer {
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    text-align: center;
+                    text-align: center !important;
                     margin-bottom: 15px;
 
                     img {
@@ -244,6 +244,7 @@ footer {
         }
 
         .adress {
+            text-align: center !important;
             margin-top: 0px;
         }
 

@@ -3,10 +3,6 @@
 // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
 @import "variables.scss";
 
-* {
-    box-sizing: border-box !important;
-}
-
 // Here comes all the typo styles
 body {
     overflow-x: hidden;
@@ -17,7 +13,8 @@ body {
 }
 
 * {
-    line-height: 1.62;
+    box-sizing: border-box !important;
+    line-height: 1.62 !important;
     font-family: 'Noto Sans', sans-serif;
     color: black;
 }
@@ -52,12 +49,12 @@ p {
 }
 
 a {
-    color: $c-gray;
+    color: $c-blue-secondary;
     font-size: 14px;
     text-decoration: none;
 
     &:hover {
-        color: $c-blue-secondary;
+        color: $c-gray;
     }
 }
 
@@ -86,7 +83,7 @@ li {
     color: $c-blue-main;
     display: block;
     font: inherit;
-    line-height: 1;
+    line-height: 1.62;
     margin: auto;
     padding: 1em 2em;
     transition: .3s;
