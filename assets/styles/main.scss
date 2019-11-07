@@ -3,6 +3,10 @@
 @import "../../node_modules/bootstrap/scss/bootstrap-grid.scss"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
 @import "variables.scss";
 
+* {
+    box-sizing: border-box !important;
+}
+
 // Here comes all the typo styles
 body {
     overflow-x: hidden;
