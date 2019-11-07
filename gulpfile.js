@@ -21,10 +21,11 @@ gulp.task('sass', function () {
             debug: true,
             level: 2
         }, (details) => {
-            console.log(`${details.name} Original size : ${details.stats.originalSize}`);
-            console.log(`${details.name} Minified size : ${details.stats.minifiedSize}`);
-            console.log(`${details.name} time spent in compiling : ${details.stats.timeSpent}ms`);
-            console.log(`${details.name} Errors : ${details.errors}`);
+            console.log(`===== ${details.name} : =====`);
+            console.log(`Original size : ${details.stats.originalSize}`);
+            console.log(`Minified size : ${details.stats.minifiedSize}`);
+            console.log(`time spent in compiling : ${details.stats.timeSpent}ms`);
+            console.log(`Errors : ${details.errors}`);
         }))
         .pipe(concat('main.css'))
         .pipe(sourcemaps.write('./'))
