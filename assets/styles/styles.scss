@@ -393,8 +393,11 @@ section {
             div {
                 h1,
                 h2,
-                h3 {
+                h3,
+                h4,
+                h5 {
                     width: 100%;
+                    padding: 0 20px;
                 }
 
                 h2 {
@@ -403,6 +406,7 @@ section {
 
                 p {
                     text-align: justify;
+                    padding: 0 20px;
 
                     .cta {
                         margin-top: 22px;
