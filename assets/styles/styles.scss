@@ -435,4 +435,31 @@ section {
     }
 }
 
+.partenaires {
+    .container {
+        .row {
+            &:first-child {
+                margin-bottom: 0;
+            }
+
+            h3,
+            p {
+                text-align: center;
+                width: 100%;
+            }
+            img {
+                height: 125px;
+                object-fit: contain;
+            }
+
+            p {
+                &.fig-caption {
+                    font-style: italic;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
 // =========== END HOMEPAGE ============= //
