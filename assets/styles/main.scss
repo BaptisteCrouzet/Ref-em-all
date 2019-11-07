@@ -1,6 +1,6 @@
 // Here we call all the style files
-
-@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+// Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
 @import "variables.scss";
 
 * {
@@ -98,4 +98,34 @@ li {
         box-shadow: inset 0 0 0 2em $c-blue-main;
         color: #fff;
     }
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.text-justify {
+    text-align: justify;
+    font-size: 18px;
+}
+
+.no-margin-h2 {
+    margin: 0;
+}
+
+.margin10 {
+    margin: 10px;
+}
+
+.ntfChildRefDefinition .nthChild:nth-child(odd) {
+    background-color: #f3f2f2;
+}
+.ntfChildRefDefinition .nthChild:nth-child(even) {
+    background-color: #ffffff;
+}
+.img-fluid {
+    max-width: 100%;
+}
+.height350 {
+    height: 350px;
 }
