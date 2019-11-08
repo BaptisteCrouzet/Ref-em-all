@@ -19,7 +19,15 @@ gulp.task('sass', function () {
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(cleanCSS({
             debug: true,
-            level: 2
+            level: {
+                1: {
+                    all: true
+                },
+                2: {
+                    all: true, // sets all values to `false`
+                    removeDuplicateRules: true // turns on removing duplicate rules
+                }
+            }
         }, (details) => {
             console.log(`===== ${details.name} : =====`);
             console.log(`Original size : ${details.stats.originalSize}`);
