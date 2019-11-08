@@ -14,7 +14,7 @@
 
         nav {
             background-color: white;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 0 20px rgba(82, 102, 249, 0.23);
             display: flex;
             height: 80px;
             justify-content: space-around;
@@ -563,4 +563,32 @@ section {
 }
 .title{
   margin-top: 100px;
+}
+
+// ================ END CONTACT PAGE ============= //
+
+// ================ COMPANY'S PAGE =============== //
+section {
+    &.our-story {
+        .container {
+            .row {
+                .col-8 {
+                        background-color: white;
+                        padding: 20px;
+                        border-radius: 15px;
+                        width: 70%;
+                        flex: 70%;
+                        max-width: 70%;
+                        margin: auto;
+                        margin-top: -210px;
+                        box-shadow: 0 -12px 20px rgba(83, 103, 252, 0.18823529411764706);
+                }
+            }
+        }
+    }
+
+    &.origin {
+        padding-bottom: 0;
+        padding-top: 10px;
+    }
 }
