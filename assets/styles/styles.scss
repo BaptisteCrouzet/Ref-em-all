@@ -591,4 +591,10 @@ section {
         padding-bottom: 0;
         padding-top: 10px;
     }
+
+    &.collab {
+        .cta {
+            margin-bottom: 20px;
+        }
+    }
 }
