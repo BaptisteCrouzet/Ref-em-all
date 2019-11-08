@@ -1,6 +1,11 @@
 // Here we call all the style files
-@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
-// Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
+
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
+@import "../../node_modules/bootstrap/scss/mixins"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
+@import "../../node_modules/bootstrap/scss/functions"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
+@import "../../node_modules/bootstrap/scss/variables"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
+@import "../../node_modules/bootstrap/scss/card"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
+@import "../../node_modules/bootstrap/scss/buttons";
 @import "variables.scss";
 
 // Here comes all the typo styles
@@ -128,4 +133,21 @@ li {
 }
 .height350 {
     height: 350px;
+}
+
+#page section .nth:nth-child(2n){
+  background-color: lightgrey;
+}
+.blog-left-container{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.blog-right-container{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.text-center{
+  text-align: center;
 }
