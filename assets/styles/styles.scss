@@ -462,6 +462,37 @@ section {
     }
 }
 
+.reviews {
+    .container {
+        .row {
+            div {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                align-content: baseline;
+
+                h4 {
+                    text-align: center;
+                }
+
+                * {
+                    width: 100%;
+                }
+
+                img {
+                    width: 40px !important;
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
 .care {
     p {
         text-align: center !important;
