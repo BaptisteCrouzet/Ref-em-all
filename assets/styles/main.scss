@@ -13,28 +13,30 @@ body {
 }
 
 * {
-  line-height: 1.62;
-  font-family: 'Noto Sans', sans-serif;
-  color: black;
+    box-sizing: border-box !important;
+    line-height: 1.62 !important;
+    font-family: 'Noto Sans', sans-serif;
+    color: black;
 }
 
 h1 {
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 h2 {
-  font-size: 25px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 h3 {
-  font-size: 20px;
-  font-weight: bold;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 h4 {
@@ -42,65 +44,88 @@ h4 {
 }
 
 p {
-  font-size: 14px;
-  font-weight: normal;
+    font-size: 14px;
+    font-weight: normal;
 }
 
 a {
-  color: $c-gray;
-  font-size: 14px;
-  text-decoration: none;
-
-  &:hover {
     color: $c-blue-secondary;
-  }
+    font-size: 14px;
+    text-decoration: none;
+    transition: .25s;
+
+    &:hover {
+        color: $c-blue-main;
+    }
 }
 
 input,
 button,
 select,
 textarea {
-  background-color: white;
-  border-radius: none;
-  border: 1px solid $c-gray;
+    background-color: white;
+    border-radius: none;
+    border: 1px solid $c-gray;
 
-  &:active,
-  &:focus {
-    border-color: $c-blue-secondary;
-  }
+    &:active,
+    &:focus {
+        border-color: $c-blue-secondary;
+    }
 }
 
 ul,
 li {
-  list-style: none;
+    list-style: none;
+}
+
+.cta {
+    background: none;
+    border: 2px solid;
+    color: $c-blue-main;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.62;
+    margin: auto;
+    padding: 1em 2em;
+    transition: .3s;
+    text-transform: uppercase;
+    width: max-content;
+
+    &:hover,
+    &:focus {
+        border-color: $c-blue-main;
+        box-shadow: inset 0 0 0 2em $c-blue-main;
+        color: #fff;
+    }
 }
 
 .width-100 {
-  width: 100%;
+    width: 100%;
 }
 
 .text-justify {
-  text-align: justify;
-  font-size: 18px;
+    text-align: justify;
+    font-size: 18px;
 }
 
 .no-margin-h2 {
-  margin: 0;
+    margin: 0;
 }
 
 .margin10 {
-  margin: 10px;
+    margin: 10px;
 }
 
 .ntfChildRefDefinition .nthChild:nth-child(odd) {
-  background-color: #f3f2f2;
+    background-color: #f3f2f2;
 }
 .ntfChildRefDefinition .nthChild:nth-child(even) {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 .img-fluid {
-  max-width: 100%;
+    max-width: 100%;
 }
-.height350{
-  height: 350px;
+.height350 {
+    height: 350px;
 }

@@ -21,10 +21,11 @@ gulp.task('sass', function () {
             debug: true,
             level: 2
         }, (details) => {
-            console.log(`${details.name} Original size : ${details.stats.originalSize}`);
-            console.log(`${details.name} Minified size : ${details.stats.minifiedSize}`);
-            console.log(`${details.name} time spent in compiling : ${details.stats.timeSpent}ms`);
-            console.log(`${details.name} Errors : ${details.errors}`);
+            console.log(`===== ${details.name} : =====`);
+            console.log(`Original size : ${details.stats.originalSize}`);
+            console.log(`Minified size : ${details.stats.minifiedSize}`);
+            console.log(`time spent in compiling : ${details.stats.timeSpent}ms`);
+            console.log(`Errors : ${details.errors}`);
         }))
         .pipe(concat('main.css'))
         .pipe(sourcemaps.write('./'))
@@ -81,6 +82,14 @@ gulp.task('images-optimize', function () {
                             format: 'jpeg'
                         },
                         {
+                            width: '350',
+                            rename: {
+                                extname: '.jpg',
+                                suffix: '-350'
+                            },
+                            format: 'jpeg'
+                        },
+                        {
                             width: 1920,
                             rename: {
                                 extname: '.jpg',
@@ -121,6 +130,13 @@ gulp.task('images-optimize', function () {
                             format: 'jpeg'
                         },
                         {
+                            width: 350,
+                            rename: {
+                                extname: '.jpg',
+                                suffix: '-350'
+                            },
+                            format: 'webp'
+                        }, {
                             width: 1920,
                             rename: {
                                 extname: '.webp',
@@ -161,6 +177,14 @@ gulp.task('images-optimize', function () {
                             format: 'webp'
                         },
                         {
+                            width: 350,
+                            rename: {
+                                extname: '.webp',
+                                suffix: '-350'
+                            },
+                            format: 'webp'
+                        },
+                        {
                             width: 1920,
                             rename: {
                                 extname: '.jpg',
@@ -197,6 +221,14 @@ gulp.task('images-optimize', function () {
                             rename: {
                                 extname: '.jpg',
                                 suffix: '-500'
+                            },
+                            format: 'jpeg'
+                        },
+                        {
+                            width: 350,
+                            rename: {
+                                extname: '.jpg',
+                                suffix: '-350'
                             },
                             format: 'jpeg'
                         },
@@ -243,6 +275,13 @@ gulp.task('images-optimize', function () {
                             }
                         },
                         {
+                            width: 350,
+                            rename: {
+                                extname: '.png',
+                                suffix: '-350'
+                            }
+                        },
+                        {
                             width: 1920,
                             rename: {
                                 extname: '.webp',
@@ -279,6 +318,14 @@ gulp.task('images-optimize', function () {
                             rename: {
                                 extname: '.webp',
                                 suffix: '-500'
+                            },
+                            format: 'webp'
+                        },
+                        {
+                            width: 350,
+                            rename: {
+                                extname: '.webp',
+                                suffix: '-350'
                             },
                             format: 'webp'
                         },

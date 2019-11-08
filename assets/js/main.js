@@ -19,4 +19,4 @@ window.onload = function () {
 }
 
 // ======= SCROLL REVEAL ========
-ScrollReveal().reveal('section');
+ScrollReveal().reveal('section .row > div');

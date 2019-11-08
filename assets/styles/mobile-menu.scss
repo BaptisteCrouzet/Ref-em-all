@@ -199,7 +199,6 @@
     }
 
     header {
-        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -217,7 +216,7 @@
     position: absolute;
     top: 0;
     width: 100%;
-    z-index: 3;
+    z-index: 200;
 
     & > a:first-child {
         display: block;
