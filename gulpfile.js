@@ -9,6 +9,7 @@ const webp = require('gulp-webp');
 const responsive = require('gulp-responsive');
 const concat = require('gulp-concat');
 const minify = require('gulp-minify');
+const autoprefixer = require('gulp-autoprefixer')
 
 sass.compiler = require('node-sass');
 
@@ -36,6 +37,7 @@ gulp.task('sass', function () {
             console.log(`Errors : ${details.errors}`);
         }))
         .pipe(concat('main.css'))
+        .pipe(autoprefixer())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('./dist'));
 });
