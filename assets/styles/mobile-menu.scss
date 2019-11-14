@@ -19,6 +19,7 @@
         visibility: hidden;
         transition: all .375s;
         padding-top: 59px;
+        position: fixed;
 
         /* Yellow band effect */
         &::before {
@@ -213,7 +214,7 @@
 .header-mobile {
     background-color: white;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 200;
