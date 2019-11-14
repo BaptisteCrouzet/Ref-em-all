@@ -627,3 +627,22 @@ section {
         object-position: center;
     }
 }
+
+.newsletter {
+    h3,
+    p {
+        text-align: center;
+    }
+
+    input[type=text] {
+        width: 100%;
+        margin-bottom: 13px;
+        padding: 15.1px 11px;
+        border-right: 0;
+    }
+    input + input {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
