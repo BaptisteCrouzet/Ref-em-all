@@ -1,2 +1,5 @@
 User-agent: *
+Allow: /
+Disallow: /dist/pages/mentions-legales.html
+Disallow: /dist/pages/politique-confidentialite.html
 Sitemap: https://www.refemall.baptistecrouzet.fr/sitemaps.xml
