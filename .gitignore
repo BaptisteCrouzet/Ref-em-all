@@ -6,3 +6,4 @@ node_modules
 /assets/images/*
 /dist/*.js
 .vscode
+.idea/

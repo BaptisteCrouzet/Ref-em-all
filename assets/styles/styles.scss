@@ -1,5 +1,6 @@
 // Here come the styles of the site
-@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss"; // Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
+@import "../../node_modules/bootstrap/scss/bootstrap-grid.scss";
+// Bootstrap grid see -> https://getbootstrap.com/docs/4.0/layout/grid/#variables
 @import "variables.scss";
 
 
@@ -50,9 +51,9 @@
                         font-size: 15px;
                         transition: 0.3s ease-in-out;
 
-                        @media screen and (max-width: 1200px) {
-                            font-size: 14px;
-                        }
+                            @media screen and (max-width: 1200px) {
+                                font-size: 14px;
+                            }
 
                         &:hover {
                             color: $c-blue-main;
@@ -120,6 +121,7 @@
         }
     }
 }
+
 // =========== END HEADER ========= //
 
 
@@ -137,6 +139,7 @@ footer {
     right: 0;
     bottom: 0;
 }
+
 // =========== END FOOTER AND MAIN BEHAVIOR ========= //
 
 
@@ -147,62 +150,62 @@ footer {
     .container {
         .row {
             &:first-child {
-                padding: 30px;
+            padding: 30px;
 
-                .links {
-                    ul {
-                        padding: initial;
-                        margin: 0;
+            .links {
+                ul {
+                padding: initial;
+                margin: 0;
 
-                        li {
-                            height: 35px;
-                            text-align: center;
-                        }
-                    }
+                li {
+                    height: 35px;
+                    text-align: center;
+                }
+                }
+            }
+
+            .refemall-agency {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center !important;
+                margin-bottom: 15px;
+
+                img {
+                    max-width: 170px;
                 }
 
-                .refemall-agency {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center !important;
-                    margin-bottom: 15px;
+                img,
+                p {
+                    width: 100%;
+                }
+            }
+
+            .socials {
+                display: flex;
+                justify-content: center;
+
+                @include media-breakpoint-down(md) {
+                    margin-bottom: 22px;
+                }
+
+                a {
+                    background-color: white;
+                    border-radius: 50%;
+                    display: inline-block;
+                    height: 30px;
+                    margin: 7px;
+                    margin-top: -5px;
+                    width: 30px;
 
                     img {
-                        max-width: 170px;
-                    }
-
-                    img,
-                    p {
-                        width: 100%;
+                        margin-left: -2px;
+                        margin-top: -2px;
+                        width: 34px;
                     }
                 }
-
-                .socials {
-                    display: flex;
-                    justify-content: center;
-
-                    @include media-breakpoint-down(md) {
-                        margin-bottom: 22px;
-                    }
-
-                    a {
-                        background-color: white;
-                        border-radius: 50%;
-                        display: inline-block;
-                        height: 30px;
-                        margin: 7px;
-                        margin-top: -5px;
-                        width: 30px;
-
-                        img {
-                            margin-left: -2px;
-                            margin-top: -2px;
-                            width: 34px;
-                        }
-                    }
-                }
+            }
             }
 
             p,
@@ -248,7 +251,7 @@ footer {
         height: 100%;
         position: absolute;
         background-color: #0000;
-        background-image: linear-gradient(-5deg,rgba(0,0,0,0) 0,#fff 33%);
+        background-image: linear-gradient(-5deg, rgba(0, 0, 0, 0) 0, #fff 33%);
         display: block;
     }
 
@@ -257,7 +260,7 @@ footer {
 
         h5 {
             color: black;
-            margin-bottom:  5px;
+            margin-bottom: 5px;
             text-transform: uppercase;
         }
 
@@ -277,6 +280,7 @@ footer {
         }
     }
 }
+
 // =========== END FOOTER ========== //
 
 // =========== HOMEPAGE ============= //
@@ -435,7 +439,7 @@ section {
                     }
                 }
 
-                img  {
+                img {
                     width: 100%;
                 }
             }
@@ -455,6 +459,7 @@ section {
                 text-align: center;
                 width: 100%;
             }
+
             img {
                 height: 125px;
                 object-fit: contain;
@@ -512,61 +517,68 @@ section {
 // =========== Contact Page ========== //
 
 .get-in-touch {
-  max-width: 800px;
-  margin: 50px auto;
-  position: relative;
-
+    max-width: 800px;
+    margin: 50px auto;
+    position: relative;
 }
+
 .get-in-touch .title {
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 48px;
-  padding-bottom: 48px;
-  color: #5543ca;
-  background: #5543ca;
-  -webkit-background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 48px;
+    padding-bottom: 48px;
+    color: black;
+    background: black;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
 }
 
 .contact-form .form-field {
-  position: relative;
-  margin: 32px 0;
+    position: relative;
+    margin: 32px 0;
 }
+
 .contact-form .input-text {
-  display: block;
-  width: 100%;
-  height: 36px;
-  border-width: 0 0 2px 0;
-  border-color: $c-blue-main;
-  line-height: 26px;
-  font-weight: 400;
+    display: block;
+    width: 100%;
+    height: 36px;
+    border-width: 0 0 2px 0;
+    border-color: $c-blue-main;
+    line-height: 26px;
+    font-weight: 400;
 }
 
 .contact-form .label {
-  line-height: 26px;
-  font-weight: 400;
-  color: $c-blue-secondary;
-  cursor: text;
-  transition: -webkit-transform .2s ease-in-out;
-  transition: transform .2s ease-in-out;
-  transition: transform .2s ease-in-out,
-  -webkit-transform .2s ease-in-out;
+    line-height: 26px;
+    font-weight: 400;
+    color: $c-blue-secondary;
+    cursor: text;
+    transition: -webkit-transform .2s ease-in-out;
+    transition: transform .2s ease-in-out;
+    transition: transform .2s ease-in-out,
+    -webkit-transform .2s ease-in-out;
 }
+
 .contact-form .submit-btn {
-  display: inline-block;
-  background-color: #000;
-  background-image: linear-gradient(125deg, $c-blue-main, $c-blue-secondary);
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 8px 16px;
-  border: none;
-  width:200px;
-  cursor: pointer;
+    display: inline-block;
+    background-color: #000;
+    background-image: linear-gradient(125deg, $c-blue-main, $c-blue-secondary);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 8px 16px;
+    border: none;
+    width: 200px;
+    cursor: pointer;
 }
-.title{
-  margin-top: 100px;
+
+.title {
+    margin-top: 100px;
+    color: black;
+}
+.card-body{
+    padding-top: 0;
 }
 
 // ================ END CONTACT PAGE ============= //
@@ -618,5 +630,24 @@ section {
         height: 300px;
         object-fit: cover;
         object-position: center;
+    }
+}
+
+.newsletter {
+    h3,
+    p {
+        text-align: center;
+    }
+
+    input[type=text] {
+        width: 100%;
+        margin-bottom: 13px;
+        padding: 15.1px 11px;
+        border-right: 0;
+    }
+    input + input {
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 }
