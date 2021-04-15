@@ -11,7 +11,7 @@ const concat = require('gulp-concat');
 const minify = require('gulp-minify');
 const autoprefixer = require('gulp-autoprefixer')
 
-sass.compiler = require('node-sass');
+sass.compiler = require('sass');
 
 // Optimisation for sass files in dev
 gulp.task('sass', function () {
