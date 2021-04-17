@@ -12,11 +12,11 @@ Ref'em all is an exercise to SEO and webmarketing at Ynov School. Made by Philip
 
 ### Personae made by Baptiste
 
-<img src="https://github.com/BaptisteCrouzet/Ref-em-all/blob/master/personae/Personae-Antoine.jpg?raw=true" alt="image">
+<img src="https://github.com/BaptisteCrouzet/Ref-em-all/blob/master/personae/Persona-Antoine.jpg?raw=true" alt="image">
 
-<img src="https://github.com/BaptisteCrouzet/Ref-em-all/blob/master/personae/Personae-Chloe.jpg?raw=true" alt="image">
+<img src="https://github.com/BaptisteCrouzet/Ref-em-all/blob/master/personae/Persona-Chloe.jpg?raw=true" alt="image">
 
-<img src="https://github.com/BaptisteCrouzet/Ref-em-all/blob/master/personae/Personae-Eric.jpg?raw=true" alt="image">
+<img src="https://github.com/BaptisteCrouzet/Ref-em-all/blob/master/personae/Persona-Eric.jpg?raw=true" alt="image">
 
 ## Authors
 
