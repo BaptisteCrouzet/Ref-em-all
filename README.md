@@ -10,6 +10,14 @@ Ref'em all is an exercise to SEO and webmarketing at Ynov School. Made by Philip
 * Scroll Reveal
 * SCSS
 
+### Personae made by Baptiste
+
+<img src="https://github.com/BaptisteCrouzet/Ref-em-all/blob/master/personae/Personae-Antoine.jpg?raw=true" alt="image">
+
+<img src="https://github.com/BaptisteCrouzet/Ref-em-all/blob/master/personae/Personae-Chloe.jpg?raw=true" alt="image">
+
+<img src="https://github.com/BaptisteCrouzet/Ref-em-all/blob/master/personae/Personae-Eric.jpg?raw=true" alt="image">
+
 ## Authors
 
 Philippe Gambier : https://github.com/Fifi01
